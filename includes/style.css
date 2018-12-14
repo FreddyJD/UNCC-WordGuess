@@ -1,17 +1,57 @@
+/* 
+
+- Feel free to re-use my CSS. 
+
+- Colors are inspited by 
+Stranger Things
+
+- Contianer box have a transperancy level (it will the color if you change the background color)
+
+
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Monoton|Open+Sans|Press+Start+2P');
 
 body { 
     background-color: #111111;
 }
+h1 { 
+    text-align: center;
+}
 
 .h1-up { 
     font-family: 'Monoton';
+    font-size: 120px;
+    position: relative;
+    color: red;
+    text-shadow: 0 0 60px rgb(216, 30, 30),0 0 15px rgb(138, 33, 33),0 0 3px rgb(110, 0, 0);
 }
 
 .h1-down { 
     font-family: 'Press Start 2P', cursive;
+    font-size: 70px;
+    position: relative;
+    color: white;
+    text-shadow: 0 0 19px rgb(255, 255, 255),0 0 5px rgb(242, 255, 195),0 0 2px rgb(189, 220, 255);
+    top: -50px;
 }
 
-h2, h3, h4, p, a, span { 
+h2 { 
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+}
+
+h3, h4, p, a, span { 
     font-family: 'Open Sans', sans-serif;
+}
+
+.container-content { 
+    background-color: #ffffff02;
+    color: rgb(206, 206, 206);
+    width: 680px;
+    padding: 30px 50px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.521);
+    
 }
