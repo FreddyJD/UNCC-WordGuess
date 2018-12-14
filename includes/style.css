@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Open+Sans|Press+Start+2P');
+
+body { 
+    background-color: #111111;
+}
+
+.h1-up { 
+    font-family: 'Monoton';
+}
+
+.h1-down { 
+    font-family: 'Press Start 2P', cursive;
+}
+
+h2, h3, h4, p, a, span { 
+    font-family: 'Open Sans', sans-serif;
+}
