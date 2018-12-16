@@ -38,13 +38,17 @@ h1 {
 
 h2 { 
     font-family: 'Press Start 2P', cursive;
-    font-size: 20px;
+    font-size: 16px;
 }
 
-h3, h4, p, a, span { 
+
+h3, h4, p, a { 
     font-family: 'Open Sans', sans-serif;
 }
 
+.container-title { 
+    margin: 20px auto 2px;
+}
 .container-content { 
     background-color: #ffffff02;
     color: rgb(206, 206, 206);
@@ -53,5 +57,38 @@ h3, h4, p, a, span {
     margin: 0 auto;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.521);
+    
+}
+
+.container-content-netflix-shows{ 
+    background-color: #ff000036;
+    color: rgb(206, 206, 206);
+    width: 100%;
+    padding: 30px 50px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.308);
+    
+}
+
+.container-content-netflix-shows-game{ 
+    background-color: #ff000036;
+    color: rgb(206, 206, 206);
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.308);
+    
+}
+
+.container-content-scores{ 
+    background-color: #ffffffa1;
+    color: rgb(44, 44, 44);
+    width: 100%;
+    padding: 30px 50px;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.308);
     
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="includes/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container container-title">
         <div class="row">
             <div class="col-md-12">
             <h1 class="h1-up">GUESS</h1>
@@ -32,9 +32,29 @@
             </div>
             <div class="col-md-6">
                 <!-- Game will run here  -->
+                <div class="container container-content-netflix-shows">
+                    <h2>Netflix Shows</h2>
+
+                </div>
+
+                <div class="container container-content-scores">
+                    <p>
+                        <b>Current score</b>: <span id="userScore"> 0 </span>  <br>
+                        <b>Attemps left</b>: <span id="attemptsLeft_tag">0</span>  <br>
+                        <b>Guessed words</b>: <span id="usedWords_tag">A, B, C</span>  <br>
+                    </p>
+                </div>
+                <div class="container container-content-netflix-shows-game">
+                    <p>
+                        <h2>
+                            <span id="netflix"></span> 
+                        </h2>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
+    <script   src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
+    <script src="includes/game.js"></script>
 </body>
-<script src="includes/game.js"></script>
 </html>
