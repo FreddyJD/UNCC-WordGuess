@@ -1,33 +1,28 @@
-var netflixWords = ["Stranger Things", "House of Cards", "Money Heist", "Black Mirror", "Big Mouth",]
-var easyChoose = netflixWords[Math.floor(Math.random() * netflixWords.length)].toLowerCase();
-var easySplit = easyChoose.split("");
-var wordSize = easyChoose.length;
-var display = [wordSize];
-var outputLetter = "";
-var userGuess;
+var words = ["test", "random"];
+var ranNum = Math.floor(Math.random() * words.length);
+var displayWord = words[ranNum];
+var wSplit = (displayWord).split('');
+currentWord = [];
 
-function start() {
-    for (var a = 0; a < easyChoose.length; a++) {
-        display[a] = "_ ";
-        outputLetter = outputLetter + display[a];
-    }
-    $("#netflix").html(outputLetter);
-}
-
-function key() {
+function main() {
     document.onkeyup = function (event) {
-        var userGuess = event.key.toLowerCase();
-        
-        for (var c = 0; c < easyChoose.length; c++) {
-            if (userGuess === easyChoose[c]) {
-                console.log("You got it right")
+        var userGuess = [];
+        var letter = event.key.toLowerCase();
+        for (var i = 0; i < displayWord.length; i++) {
 
-            } else if (userGuess !== easyChoose[c]) {
-                console.log("wrong")
+            if (wSplit[i] === " ") {
+            userGuess.push(" ");
+
+            } else if (wSplit[i] === letter) {
+            userGuess.push(wSplit[i]);
+
+            } else {
+            userGuess.push("_ ")
+
             }
         }
-    }
-}
+        document.getElementById("netflix").innerHTML = userGuess.join(" ");  
+    } 
+};
 
-start();
-key();
+main();
