@@ -14,8 +14,12 @@ let tempB;
 function start() {
     console.log(dword);
     for (let l = 0; l < dword.length; l++) {
-        hideWord.push("_ ")[l];
-        $('#netflix').html(hideWord);
+        if (dword[l] === " ") {
+            hideWord.push(" ");
+        } else {
+            hideWord.push("_ ")[l];
+            $('#netflix').html(hideWord);
+        }
     }
 }
 start();
