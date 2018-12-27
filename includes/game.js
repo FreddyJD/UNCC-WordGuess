@@ -1,28 +1,53 @@
-var words = ["test", "random"];
-var ranNum = Math.floor(Math.random() * words.length);
-var displayWord = words[ranNum];
-var wSplit = (displayWord).split('');
-currentWord = [];
+const words = [
+    "Bo Jack Horse man ",
+    "Stranger Things",
+    "House of Cards"];
+let len = words.length;
+let choosed = words[Math.floor(Math.random() * len)].toLocaleLowerCase();
+var dword = choosed.split("");
+var hideWord = [];
+var maxWords = 15;
+var score = 0;
+let tempA;
+let tempB;
 
-function main() {
-    document.onkeyup = function (event) {
-        var userGuess = [];
-        var letter = event.key.toLowerCase();
-        for (var i = 0; i < displayWord.length; i++) {
+function start() {
+    console.log(dword);
+    for (let l = 0; l < dword.length; l++) {
+        hideWord.push("_ ")[l];
+        $('#netflix').html(hideWord);
+    }
+}
+start();
 
-            if (wSplit[i] === " ") {
-            userGuess.push(" ");
-
-            } else if (wSplit[i] === letter) {
-            userGuess.push(wSplit[i]);
-
-            } else {
-            userGuess.push("_ ")
-
-            }
+document.addEventListener('keyup', (event) => {
+    let temp = event.key.toLocaleLowerCase();
+    tempA = dword.toString();
+    tempB = hideWord.toString();
+    maxWords--;
+    $('#maxWords').html(maxWords);
+    for (let l = 0; l < dword.length; l++) {
+        if (dword[l] === temp) {
+            hideWord[l] = temp
+            $('#netflix').html(hideWord);
         }
-        document.getElementById("netflix").innerHTML = userGuess.join(" ");  
-    } 
-};
-
-main();
+    }
+    if (tempA === tempB) {
+        score++;
+        $('#score').html(score);
+        restart();
+    } else if (maxWords === 0) {
+        score--; 
+        $('#score').html(score);
+        restart();
+    }
+});
+function restart() { 
+    choosed = words[Math.floor(Math.random() * len)];
+    dword = choosed.split("");
+    hideWord = [];
+    tempA = dword.toString();
+    tempB = hideWord.toString();
+    maxWords = 15;
+    start();
+}
